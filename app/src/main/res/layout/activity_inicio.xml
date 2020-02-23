@@ -16,9 +16,17 @@
         android:id="@+id/btnPachuca"/>
 
     <ListView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/lstCiudades"/>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gridCiudades"
+        android:numColumns="2"
+        />
 
 
 

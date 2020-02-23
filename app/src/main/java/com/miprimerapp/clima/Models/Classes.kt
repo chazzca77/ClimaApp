@@ -1,17 +1,35 @@
-package com.miprimerapp.clima
+package com.miprimerapp.clima.Models
 
-class Ciudades(nombre:String,grados:Int,estatus:String){
+class Ciudades(nombre:String,grados:Int,estatus:String,imagen:Int){
 
     var nombre:String = ""
     var grados:Int = 0
     var estatus:String = ""
+    var imagen:Int = 0
 
     init{
         this.nombre = nombre
         this.grados = grados
         this.estatus = estatus
+        this.imagen = imagen
     }
 }
+
+class Usuarios(nombre:String,pais:String,estado:String,experiencia:Int){
+
+    var nombre:String = ""
+    var pais:String = ""
+    var estado:String = ""
+    var experiencia:Int = 0
+
+    init{
+        this.nombre = nombre
+        this.pais = pais
+        this.estado = estado
+        this.experiencia = experiencia
+    }
+}
+
 
 
 /**

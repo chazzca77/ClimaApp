@@ -7,8 +7,9 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import com.miprimerapp.clima.Ciudades
+import com.miprimerapp.clima.Models.Ciudades
 import com.miprimerapp.clima.R
+import com.miprimerapp.clima.Utils.cargarImagen
 import kotlinx.android.synthetic.main.template.view.*
 
 class CustomAdapter(var context:Context,items:ArrayList<Ciudades>):BaseAdapter(){
@@ -24,7 +25,7 @@ class CustomAdapter(var context:Context,items:ArrayList<Ciudades>):BaseAdapter()
         var vista:View? = null
 
         if(vista==null){
-            vista = LayoutInflater.from(context).inflate(R.layout.template,null)
+            vista = LayoutInflater.from(context).inflate(R.layout.template_grid,null)
             holder = ViewHolder(vista)
             vista.tag = holder
         }else{
@@ -33,7 +34,8 @@ class CustomAdapter(var context:Context,items:ArrayList<Ciudades>):BaseAdapter()
 
         val item = getItem(position) as Ciudades
         holder?.nombre?.text = item.nombre
-
+        //holder?.imagen?.setImageResource(item.imagen)
+        holder?.imagen?.cargarImagen(item.imagen)
 
         return vista!!
     }
